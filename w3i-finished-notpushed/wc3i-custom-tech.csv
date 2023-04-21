@@ -1,0 +1,3 @@
+Type,Description,Explanation
+int,Players (bitmap),"From lowest to highest bit: (0=Tech AVAILABLE for player, 1=Tech UNAVAILABLE for player)"
+`char[4]`,Tech rawcode ID,"It can be one of: item, unit, ability"

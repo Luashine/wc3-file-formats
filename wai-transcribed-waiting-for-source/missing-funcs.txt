@@ -1,0 +1,5 @@
+Need to get these functions:
+sub_54AC20	Reads Condition index + Condition deifnition structure?
+sub_52FA80	takes unknown_extra_ver_v8
+sub_6FEE80	takes struct offset+4
+sub_6F61B0	takes struct offset+260

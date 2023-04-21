@@ -1,0 +1,5 @@
+Custom upgrades,Description,Explanation
+int,Players (bitmap),"From lowest to highest bit: 0=upgrade does not apply to player, 1=upgrade does apply to player"
+`char[4]`,Upgrade rawcode ID,
+int,Upgrade level,
+int,Upgrade available,"0=Not available, 1=Available, 2=Researched"

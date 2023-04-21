@@ -1,0 +1,23 @@
+w3s version 3:
+header: 3
+number of sounds
+for each sound: {
+	//the already somewhat known main chunk goes here
+	
+	string: name
+	string: SoundGroup? (EvilIllidanMorphedPissed for sound Units/NightElf/Illidan/IllidanMorphedPissed5.flac)
+	string: path
+	int
+	string? empty
+	int
+	int unk   (seen only as 0 or 0x64000100)
+	if (unk != 0):
+		string? empty
+	string? empty
+	string: unit id (looks like it has a null terminator)
+	string: file name but without the extension?
+	string: dialogue stuff idk ("Map" for BanditYesAttack2 and Map-Arthas for H02Arthas03, some sort of speaker/source name)
+	string: facial animation animset file path
+	int (this might be the only thing added in v3, the size of the rest could fit in v2 or at least it looks like that)
+}
+	

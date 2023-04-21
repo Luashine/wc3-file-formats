@@ -1,0 +1,1 @@
+https://github.com/BogdanW3/HiveWE/blob/w3f/src/Base/CampaignInfo.cpp

@@ -1,0 +1,9 @@
+Type,Description,Explanation,
+int,Table number,,
+string,Table name,,
+int,Number of item sets in table,Variable j,
+,repeat j times:,,
+,int,Amount of items in set:,Variable k
+,,repeat k times:,
+,,int,Chance (in percent)
+,,`char[4]`,Item rawcode ID

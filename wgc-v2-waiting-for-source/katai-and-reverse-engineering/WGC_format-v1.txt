@@ -1,0 +1,76 @@
+// Thanks to BogdanW3 and Zed
+
+// int = 32-bit LE (assume be unsigned)
+// path string: zero-terminated UTF-8(!) string (Reforged)
+// path string: zero-terminated ANSI(!) string (v1.27)
+// i.e. for old WC3 you can't use Unicode in path because using old WinAPI
+
+.WGC (Warcraft Game Configuration):
+int4: version = 1
+int4: flags: combinable
+	0x01: disable fog of war (1 = disabled)
+	0x02: disable victory/defeat conditions (1 = disabled)
+	
+// Seems to be an unsigned int or is capped at a value
+// 0=pause, 1 = 1x etc.
+// slower than 1x doesnt appear possible
+// \0 effectively pauses all game simulation
+int4: game speed
+
+// relative paths work up to disk root "..\..\..\(3)Nighthaven.w3m"
+// e.g. "Maps\(2)HillsOfGlory.w3m"
+//
+// Reforged starts in ...Warcraft III/_retail_/
+// so your maps must be placed there, e.g.:
+// ...\_retail_\Maps\(2)HillsOfGlory.w3m
+string: relative map path zero-terminated
+
+// n = amount of all players defined including observers
+int4: number of players
+
+for each player:
+	// Slot, Starting from 0
+	int: player number
+	
+	// Starting from 0 for playing players
+	// for observers is always 0
+	int: team
+	
+	// Observers have their race defined too, but seems to have no impact
+	// Observer's UI always human
+	int: race: 
+		0x01: human
+		0x02: orc
+		0x04: night elf
+		0x08: undead
+		0x20: random
+	
+	// Starting from 0=red. Players can have same color
+	// observer has value of 0
+	int: color
+	
+	// 50-100 decimal for 50-100% (50% unitHP)
+	// values outside this range are reset to 100%
+	int: handicap
+	
+	// Deactivated players are not written to file
+	// User+Observer =     0x3
+	// AI Type: Standard = 0x0
+	// AI Type: Current =  0xC (followed by relative ai script path)
+	// AI Type: Custom =  0x4 (followed by absolute ai script path)
+	// bits:
+	// & 0x1 = user(1) or computer(0)
+	// & 0x2 = observer(1) or playing player (0)
+	// & 0x4 = load custom ai file(1) or use default (0)
+	// & 0x8 = relative ai file path (1) or absolute file path (0)
+	int: player slot flags
+	
+	// 0=easy, 1=normal, 2=hard (setting 3+ results in no player at all)
+	// Human players and spectators MUST have their "AI Diff" set to 1,
+	// to be precise: their LSB must be set to 1 (BitOR 0x01 to raise the bit)
+	// If that bit is 0, the map will NOT load.
+	int: AI difficulty
+	
+	// e.g. d:\warcraft iii\TestGame\WorldEditTestGame.ai
+	// zero-terminated
+	string: custom AI path

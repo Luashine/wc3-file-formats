@@ -1,0 +1,7 @@
+Bit flags,Description
+0x0001,Ally
+0x0002,Share victory
+0x0004,Unknown
+0x0008,Share visibility
+0x0010,Share control
+0x0020,Share control advanced (all)

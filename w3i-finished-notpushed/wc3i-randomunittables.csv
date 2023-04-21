@@ -1,0 +1,9 @@
+Type,Description,Explanation
+int,This group's number,
+string,Group name,
+int,Number of elements (columns),Variable j
+`int[j]`,Element type,"0=Unit, 1=Building, 2=Item"
+int,Number of rows,Variable k
+,repeat k times:,
+,int,Chance (in percent)
+,`char[j*4]`,Rawcode IDs (unit/building/item)
