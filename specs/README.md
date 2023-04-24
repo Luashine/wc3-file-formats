@@ -51,6 +51,8 @@ Basically this is my status / WIP list (note to self: see `todo-list.secret.md` 
 - wtg
 	- transcribed
 	- waiting for source
+- wts
+	- final spec part of the Info PR at Chief's repo (see PR 7)
 
 
 ## What file does what
