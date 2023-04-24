@@ -77,15 +77,13 @@ CascView and casclib.
 - **Kaitai Struct (and IDE)** developers, this is the best idea made real.
 - **Retera** for going on despite all odds (not yet, but I'm sure we'll need your knowledge for other
 formats soon)
-- **stijnherfst** and HiveWE contributors for creating *the alternative*
+- **stijnherfst** and HiveWE contributors for creating *the alternative*. Used as a reference sometimes.
 - **moyack** and **lep** for creating their respective Jass documentation projects.
-
 Even here it helped to know what camera data referred to!
 - People hosting map websites:
 	- "D." of **EpicWar**, that'll be one hell of a test run for a parser (over 400GB of old maps).
 	- **TriggerHappy**, for supporting post-Reforged maps and having the most comprehensive collection
 	of new maps
-
 - Communities:
 	- **Ralle** for running The Hive Workshop throughout the years. And the .ksy definition for .wtg
 	- Similarly, **XGM and Team** who are running the home for the Russian-speaking community.
