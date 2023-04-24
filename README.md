@@ -31,8 +31,7 @@ See the READMEs in subfolders.
 	- who else?
 5. Write Kaitai Struct Format Definitions ".ksy" for automated read-only parsing
 (writing support is in early alpha).
-	- In progress: `.w3i`
-	- Ralle has created one for `.wtg` (an unknown format version, probably needs updating)
+	- See [kaitai subfolder](kaitai-struct/) for details
 6. Write simple to use CLI tools, probably with Format<->JSON conversion
 
 ## Workflow:
