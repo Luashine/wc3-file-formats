@@ -1,4 +1,8 @@
+# What is Kaitai Struct
+
 It's a declarative file format parser that generates code in multiple languages based on a template.
+
+<https://doc.kaitai.io/>
 
 It was a pleasure to work with the web IDE:
 https://ide.kaitai.io/devel/
