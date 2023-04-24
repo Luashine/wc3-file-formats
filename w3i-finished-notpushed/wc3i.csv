@@ -1,0 +1,167 @@
+Type,Description,Explanation
+int,Format version,"ROC=18, TFT=25, 1.32=31; see „Version History“"
+IF( Format >= 16),,
+int,Number of saves,
+int,WorldEditor version,
+ENDIF,,
+,,
+IF( Format >= 27 ),,
+int,Game version major: A,
+int,Game version minor: B,
+int,Game version patch: C,
+int,Game version build: D,Example: A.B.C.D = 1.31.1.12173
+ENDIF,,
+,,
+string_max(109),Map name,"Note: based on game version the name will be pulled from here, HM3W header or config() in script file. \nAccepts `TRIGSTR_`"
+string_max(97),Map author,
+string_max(769),Map description,
+IF( Format >= 8 ),,
+string_max(49),Recommended players,
+ENDIF,,
+,,
+IF( Format <= 3 ),,
+`unknown(4)`,unknown_v0_unk1,Ignored by new versions
+`unknown(4)`,unknown_v0_unk2,Ignored by new versions
+ELSEIF( Format <= 8 ),,
+float,unknown_v4_float1,"Ignored by new versions, only observed 6"
+int,unknown_v4_int1,"Ignored by new versions, only observed 1"
+float,unknown_v4_float2,"Ignored by new versions, only observed 24"
+float,unknown_v4_float3,"Ignored by new versions, only observed 6"
+float,unknown_v4_float4,"Ignored by new versions, only observed 18"
+int,unknown_v4_int2,"Ignored by new versions, only observed 480"
+ENDIF,,
+,,
+`float[8]`,Camera bounds,"Left, bottom, right, top; Left, top, right, bottom"
+IF( Format >= 14 ),,
+`int[4]`,Size of map's unplayable area,"Variables A, B, C, D. See below"
+ENDIF,,
+,,
+IF( Format >= 1),,
+int,Width of playable map area,"E, map width = A+E+B"
+int,Height of playable map area,"F, map height = C+F+D"
+ENDIF,,
+,,
+IF( Format >= 2 ),,
+  IF( Format <= 8),,
+int,unknown_v3_int1,Ignored by new versions
+  ENDIF,,
+int,Map flags,See Map flags; if Format <= 14: enable the flag „Show water waves on cliff shores“
+ENDIF,,
+,,
+IF( Format >= 8 ),,
+char,Terrain: main tile type,"Example: 'A' - Ashenvale, 'L' - Summer Lordaeron"
+ENDIF,,
+,,
+IF( Format >= 17 ),,
+int,Number of loading screen background for standard campaigns,-1 = none or an imported loading screen is used
+ENDIF,,
+,,
+IF( Format >= 10 && Format != 18 && Format != 19 ),,"Note: for (10 <= FORMAT <= 17) the game stores this path in a different location, implying it might have had a different meaning"
+string_max(260),Imported loading screen path,
+ENDIF,,
+,,
+IF( Format >= 10 ),,
+string_max(6145),Loading screen text,
+   IF( Format >= 11 ),,
+string_max(97),Loading screen title,
+string_max(145),Loading screen subtitle,
+   ENDIF,,
+ENDIF,,
+,,
+IF( Format >= 17 ),,
+int,Use game data set version,"0 = Default (based on map melee status),  1 = Custom (1.01), 2 = Melee (latest patch). Set to INT_MAX in v26 ROC, not v26 TFT"
+ENDIF,,
+,,
+IF( Format >= 13 && Format != 18 && Format != 19 ),,
+   IF( Format <= 17 ),,
+string_max(260),Unknown meaning of path,
+   ELSE,,"i.e. if Format >= 20, same string is used as prologue path"
+string_max(260),Imported loading screen path for prologue,
+   ENDIF,,
+ENDIF,,
+,,
+IF( Format >= 13 ),,
+string_max(6145),Prologue screen text,
+string_max(97),Prologue screen title,
+string_max(145),Prologue screen subtitle,
+ENDIF,,
+,,
+IF( Format >= 19 ),,
+int,Ambient fog type,"0=Not enabled, above zero = number in fog style list (confirmation?)"
+float,Fog start height (Z-axis),
+float,Fog end height (Z-axis),
+float,Fog density,
+byte,Fog color R,Red
+byte,Fog color G,Green
+byte,Fog color B,Blue
+byte,Fog color A,Transparency (Alpha)
+ENDIF,,
+,,
+IF( Format >= 21 ),,
+`char[4]`,Global weather rawcode ID,0=none
+ENDIF,,
+,,
+IF( Format >= 22 ),,
+string_max(32),Custom sound environment,
+ENDIF,,
+,,
+IF( Format >= 23 ),,
+char,Custom light environment,"Example: 'A' - Ashenvale, 'L' - Summer Lordaeron"
+ENDIF,,
+,,
+IF( Format >= 25 ),,
+byte,Water tint color R,Red
+byte,Water tint color G,Green
+byte,Water tint color B,Blue
+byte,Water tint color A,Transparency (Alpha)
+ENDIF,,
+,,
+IF( Format >= 28 ),,
+int,Scripting language,"0=JASS, 1=Lua"
+ENDIF,,
+,,
+IF( Format >= 29 ),,
+int,Supported graphics modes,"1=SD, 2=HD, 3=SD+HD"
+ENDIF,,
+,,
+IF( Format >= 30 ),,
+int,Game data version,"0=ROC, 1=TFT"
+ENDIF,,
+,,
+IF( TRAILING_LEVEL >= 1 ),,"It’s an outside condition, can be detected by checking for EOF"
+int,Number of players,Variable i
+,"repeat i times, see Player Data",
+ENDIF,,
+,,
+IF( TRAILING_LEVEL >= 2 ),,"It’s an outside condition, can be detected by checking for EOF"
+IF( Format >= 3 ),,"// Needs confirmation, TODO"
+int,Number of teams (forces),Variable i
+,"repeat i times, see Team Data",
+ENDIF,,
+ENDIF,,
+,,
+IF( TRAILING_LEVEL >= 3 ),,"It’s an outside condition, can be detected by checking for EOF"
+IF( Format >= 6 ),,
+int,Number of Custom Upgrades,Variable i
+,"repeat i times, see Custom Upgrade Data",
+ENDIF,,
+,,
+IF( Format >= 7 ),,
+int,Number of Custom Tech,Variable i
+,"repeat i times, see Custom Tech Data",
+ENDIF,,
+,,
+IF( Format >= 12 ),,
+int,Number of Random Unit Tables (groups),Variable i
+,"repeat i times, see Random Unit Table Data",
+ENDIF,,
+,,
+IF( Format >= 24 ),,
+int,Number of Random Item Tables,Variable i
+,"repeat i times, see Item Table Data",
+ENDIF,,
+,,
+IF( Format == 26 || Format == 27 ),,
+int,Scripting language,Not used or available in public versions. See „Scripting language“ above
+ENDIF,,
+ENDIF,,End of TRAILING_LEVEL 3

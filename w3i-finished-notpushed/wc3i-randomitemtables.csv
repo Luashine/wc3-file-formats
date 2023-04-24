@@ -1,6 +1,6 @@
 Type,Description,Explanation,
 int,Table number,,
-string,Table name,,
+string,Table name,"Reads arbitrary length, then truncates input to max. 99 bytes (care UTF-8!)",
 int,Number of item sets in table,Variable j,
 ,repeat j times:,,
 ,int,Amount of items in set:,Variable k

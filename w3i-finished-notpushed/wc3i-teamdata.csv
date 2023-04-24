@@ -1,4 +1,4 @@
 Type,Description,Explanation
 int,Flags,See team flag bitmap
 int,Players,"From lowest bit to highest. (0=Player not in team, 1=Player in team), but you must consider the presence of player in the game, because the first team contains all players by default (slots 0 to 31), who are not part of other teams."
-string,Team name,
+string,Team name,"Reads arbitrary length, then truncates input to max. 96 bytes (care UTF-8!)"

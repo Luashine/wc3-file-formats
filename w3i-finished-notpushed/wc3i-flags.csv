@@ -3,7 +3,7 @@ Map flags,Description
 0x000002,Change ally priorities
 0x000004,Map is suitable for „Melee“ mode
 0x000008,Use non-default terrain tileset / HiveWE: „playable map size was large and has never been reduced to medium (?)“
-0x000010,Unexplored areas are partially visible (fog of war)
+0x000010,Masked (unexplored) areas are partially visible (fog of war)
 0x000020,Fixed player parameters for custom teams
 0x000040,Uses custom teams
 0x000080,Uses custom tech tree
@@ -12,7 +12,15 @@ Map flags,Description
 0x000400,Map properties menu opened at least once since map creation
 0x000800,Show water waves on cliff shores
 0x001000,Show water waves on rolling shores
+IF( TFT ),
 0x002000,Use terrain fog
 0x004000,Expansion required (TFT)
 0x008000,Item classification
 0x010000,Changes water tint color
+ENDIF,
+IF( REFORGED ),
+0x020000,Use accurate probability for calculations
+0x040000,Custom Ability Skins (?)
+ENDIF,
+0x20000000,Unkown or unused
+0x40000000,Unkown or unused

@@ -1,6 +1,6 @@
 Type,Description,Explanation
 int,This group's number,
-string,Group name,
+string,Group name,"Reads arbitrary length, then truncates input to max. 99 bytes (care UTF-8!)"
 int,Number of elements (columns),Variable j
 `int[j]`,Element type,"0=Unit, 1=Building, 2=Item"
 int,Number of rows,Variable k

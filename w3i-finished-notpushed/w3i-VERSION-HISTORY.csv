@@ -1,0 +1,33 @@
+W3I Version,Known Patch,Description
+0,,
+1,,Added playable map width/height
+2,,Added map flags
+3,,
+4,,Added unknown values before camera bounds
+5,,Added player ally priority low/high
+6,,Added: custom upgrades
+7,,Added: custom tech
+8,"Beta ROC 100, 103, 110",Added: recommended players
+9,,Removed unknowns before camera bounds present in 8 and earlier. Removed int before map flags
+10,"Beta ROC 111, 112",Added loading screen text
+11,Beta ROC 112,"Added loading screen title, subtitle"
+12,,Added random unit tables
+13,,Added prologue screen texts
+14,,Added size of map's unplayable area
+15,Beta ROC 120,"war3map.wts format introduced after v11, present in v15"
+16,?,Added WE version and map saves number
+17,,Added loading screen number for campaign and game data set version
+18,ROC Retail,Temporarily removed custom loading screen background images
+19,,Added ambient fog
+20,,Reintroduced custom loading screen background images
+21,,Added global weather rawcode id
+22,,Added custom sound env
+23,Beta TFT 299,Added custom light env
+24,Beta TFT 304,Added random item tables
+25,TFT Retail,Added water tint
+26,1.31.0.12071: ROC-ROC multi and TFT-TFT multi,"Added script lang switch, (Unconfirmed: changed how game data set version was treated between ROC/TFT)"
+27,1.31.0.12071: TFT-TFT multi,"Added game version: A.B.C.D, 1.32.3.4567"
+28,1.31.?,Moved scripting language switch
+29,,Added graphics modes
+30,,Added game data version (TFT or ROC)
+31,1.32,Added player: enemy priority low/high
