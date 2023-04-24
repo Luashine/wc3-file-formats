@@ -1,6 +1,6 @@
 Type,Description,Explanation
 int,Format version,"ROC=18, TFT=25, 1.32=31; see „Version History“"
-IF( Format >= 16),,
+IF( Format >= 16 ),,
 int,Number of saves,
 int,WorldEditor version,
 ENDIF,,
