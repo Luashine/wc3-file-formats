@@ -8,6 +8,8 @@ PLEASE, I welcome you to help in any way, shape or form. PR and patches, volunte
 
 Feel free to contact via issues or to start on your own, anywhere.
 
+See the READMEs in subfolders.
+
 ## Major goals:
 
 1. Describe all formats and their versions <-- we are here
@@ -73,17 +75,23 @@ These older spreadsheets were a result of wholesome cooperation between me and E
 - **Ladislav Zezula aka "Ladik"** for his endless amount of support and work on MPQ Editor, stormlib,
 CascView and casclib.
 - **Kaitai Struct (and IDE)** developers, this is the best idea made real.
-- **Ralle** for running The Hive Workshop throughout the years. And the .ksy definition for .wtg
 - **Retera** for going on despite all odds (not yet, but I'm sure we'll need your knowledge for other
 formats soon)
 - **stijnherfst** and HiveWE contributors for creating *the alternative*
 - **moyack** and **lep** for creating their respective Jass documentation projects.
+
 Even here it helped to know what camera data referred to!
 - People hosting map websites:
 	- "D." of **EpicWar**, that'll be one hell of a test run for a parser (over 400GB of old maps).
 	- **TriggerHappy**, for supporting post-Reforged maps and having the most comprehensive collection
 	of new maps
-- **Hodor** for his excellent documentation work and the pretty description style
+
+- Communities:
+	- **Ralle** for running The Hive Workshop throughout the years. And the .ksy definition for .wtg
+	- Similarly, **XGM and Team** who are running the home for the Russian-speaking community.
+- **ChiefOfGxBxL** for being a beacon of light in the English space with the "WC3MapSpecification" repository.
+Language barriers are unfortunate :)
+- **Hodor** for his excellent documentation work (in Russian) and the pretty description style
 - **Excalimbur** for returning me a favor and writing down and translating Hodor's documentation :)
 - **BogdanW3**, this wouldn't have been possible without you!
 - Luashine (me): "*it's a community effort*"
