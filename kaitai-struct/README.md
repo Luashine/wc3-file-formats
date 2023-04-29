@@ -12,6 +12,10 @@ Although it's read-only, but it's a great help to reverse engineer unknown forma
 
 ## Listing
 
+Water started an effort to create Kaitai Struct definitions for all formats:
+
+https://github.com/WaterKnight/Warcraft3-Formats-KaitaiStruct
+
 - w3i: WIP
 	- Luashine: see this repo (outdated, waiting for spec to finalize)
 	- WaterKnight aka Water: https://github.com/ChiefOfGxBxL/WC3MapSpecification/issues/3#issuecomment-1518745009
