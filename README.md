@@ -32,6 +32,7 @@ See the READMEs in subfolders.
 5. Write Kaitai Struct Format Definitions ".ksy" for automated read-only parsing
 (writing support is in early alpha).
 	- See [kaitai subfolder](kaitai-struct/) for details
+	- Water has begun to work on it
 6. Write simple to use CLI tools, probably with Format<->JSON conversion
 
 ## Workflow:
